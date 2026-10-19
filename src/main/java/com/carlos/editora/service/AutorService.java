@@ -28,7 +28,7 @@ public class AutorService {
 
     public Optional <List<ArtigoEntity>> buscarArtigosPorAutor(Long id){
         if(AuRepo.existsById(id)){
-            return Optional.of(ArRepo.findByAutorId(id));
+            return Optional.of(ArRepo.findByAutorIdAndPublicadoTrue(id));
         }
             return Optional.empty();
 

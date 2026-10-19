@@ -10,6 +10,9 @@ public interface ArtigoRepository extends JpaRepository<ArtigoEntity, Long> {
 
     List<ArtigoEntity> findByAutorId(Long autorId);
 
+    List<ArtigoEntity> findByAutorIdAndPublicadoTrue(Long autorId);
+    
+
     List<ArtigoEntity> findByIdioma(String idioma);
 
     List<ArtigoEntity> findByTituloContainingIgnoreCase(String trecho);
